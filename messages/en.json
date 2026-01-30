@@ -1,0 +1,33 @@
+{
+  "header": {
+    "hireDevelopers": "HIRE DEVELOPERS",
+    "reactDevelopment": "React Development",
+    "phpDevelopment": "PHP Development",
+    "hireTeam": "HIRE TEAM",
+    "ourCases": "OUR CASES",
+    "aboutUs": "ABOUT US",
+    "blog": "BLOG",
+    "career": "CAREER"
+  },
+  "home": {
+    "title1": "CUSTOM",
+    "title2": "SOFTWARE",
+    "title3": "DEVELOPMENT",
+    "title4": "COMPANY",
+    "subtitle": "WE BUILD HIGH-END TECHNOLOGICAL SOLUTIONS TO SCALE BUSINESSES",
+    "ctaFind": "WANT TO FIND DEVELOPERS?",
+    "ctaHire": "WANT TO HIRE A DEDICATED TEAM?"
+  },
+  "hireHero": {
+    "line1": "We Provide You With Developers",
+    "line2": "And Dedicated Teams",
+    "requestDeveloper": "REQUEST DEVELOPER",
+    "requestTeam": "REQUEST TEAM"
+  },
+  "footer": {
+    "hireUs": "HIRE US",
+    "contacts": "CONTACTS",
+    "beInTouch": "BE IN TOUCH",
+    "wantToKnow": "WANT TO KNOW MORE ABOUT US?"
+  }
+}
