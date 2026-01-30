@@ -6,7 +6,7 @@ import SiteLayout from "../components/SiteLayout";
 
 type Props = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 export function generateStaticParams() {
@@ -14,9 +14,9 @@ export function generateStaticParams() {
 }
 
 export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = await params;
+  const { locale } = params;
 
-  if (!routing.locales.includes(locale as "en" | "ru")) {
+  if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
@@ -24,8 +24,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <SiteLayout>{children}</SiteLayout>
     </NextIntlClientProvider>
   );
 }
+
