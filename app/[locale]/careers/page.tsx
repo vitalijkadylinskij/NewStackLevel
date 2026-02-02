@@ -1,12 +1,16 @@
-import HireDevelopersHero from "../../components/HireDevelopersHero";
+"use client";
 
+import HireDevelopersHero from "../../components/HireDevelopersHero";
+import { useTranslations } from "next-intl";
 
 export default function CareersPage() {
+  const t = useTranslations("careers");
+
   return (
     <section className="relative w-full mx-auto">
-      <HireDevelopersHero text="HIRE US" />
-        <div className="relative mx-auto mt-12 md:mt-[100px] mb-8 md:mb-[50px]">
+      <HireDevelopersHero text={t("hero")} />
 
+      <div className="relative mx-auto mt-12 md:mt-[100px] mb-8 md:pb-[100px]">
         {/* DOTS LEFT */}
         <div
           className="
@@ -22,16 +26,14 @@ export default function CareersPage() {
 
         {/* CONTENT */}
         <div className="mx-auto w-full max-w-[1100px] text-center px-4">
-          <h2 className="mb-8 md:mb-[60px] text-[24px] md:text-[36px] font-bold text-black [font-size:clamp(22px,4vw,36px)]">
-            We're always looking for new talents. Join us!
+          <h2 className="mb-8 md:mb-[60px] text-4xl font-bold text-black">
+            {t("title")}
           </h2>
 
-          <p className="text-[22px] md:text-[36px] font-bold leading-[1.2] text-black [font-size:clamp(20px,3.5vw,36px)]">
-            If you didn't find your vacancy, just send a message, and we will
-            figure it out!
+          <p className="text-4xl font-bold text-black">
+            {t("subtitle")}
           </p>
         </div>
-
       </div>
     </section>
   );

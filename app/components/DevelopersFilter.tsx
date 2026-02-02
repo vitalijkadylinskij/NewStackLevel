@@ -3,26 +3,29 @@
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import HireUsModal from "./HireUsModal";
+import { useLocale, useTranslations } from "next-intl";
 
 type Stack = "all" | "react" | "php";
 
-const CTA_CONFIG: Record<Stack, { label: string; href?: string }> = {
-  all: {
-    label: "Do you want to hire developers?",
-  },
-  react: {
-    label: "Do you want to know more about React Development?",
-    href: "/hire-react-developers",
-  },
-  php: {
-    label: "Do you want to know more about PHP Development?",
-    href: "/hire-php-developers",
-  },
-};
-
 export default function DevelopersFilter() {
+  const locale = useLocale();
+  const t = useTranslations("pageWebDevelopers");
   const [active, setActive] = useState<Stack>("all");
   const [isOpen, setIsOpen] = useState(false);
+
+  const CTA_CONFIG: Record<Stack, { label: string; href?: string }> = {
+    all: {
+      label: t("textButtonAll"),
+    },
+    react: {
+      label: t("textButtonReact"),
+      href: "/hire-react-developers",
+    },
+    php: {
+      label: t("textButtonPHP"),
+      href: "/hire-php-developers",
+    },
+  };
 
   const { label, href } = CTA_CONFIG[active];
 
@@ -43,7 +46,7 @@ export default function DevelopersFilter() {
                 }`}
               >
                 {item === "all"
-                  ? "All Developers"
+                  ? t("allDevelopers")
                   : item.toUpperCase()}
               </li>
             ))}
@@ -55,10 +58,10 @@ export default function DevelopersFilter() {
           <button
             onClick={() => setIsOpen(true)}
             className="
-              flex w-full max-w-6xl mx-auto cursor-pointer items-center justify-center
+              flex w-full max-w-5xl max-h-[78px] mx-auto cursor-pointer items-center justify-center
               border-[6px] border-blue-600
               bg-blue-600 py-6
-              text-center text-2xl font-semibold uppercase tracking-wide text-white
+              text-center text-xl font-semibold uppercase tracking-wide text-white
               transition-all duration-200
               hover:bg-white hover:text-blue-600
             "
@@ -69,10 +72,10 @@ export default function DevelopersFilter() {
           <Link
             href={href!}
             className="
-              flex w-full max-w-6xl mx-auto cursor-pointer items-center justify-center
+              flex w-full max-w-5xl max-h-[78px] mx-auto cursor-pointer items-center justify-center
               border-[6px] border-blue-600
               bg-blue-600 py-6
-              text-center text-2xl font-semibold uppercase tracking-wide text-white
+              text-center text-xl font-semibold uppercase tracking-wide text-white
               transition-all duration-200
               hover:bg-white hover:text-blue-600
             "

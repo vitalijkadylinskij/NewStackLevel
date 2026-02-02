@@ -1,7 +1,10 @@
 "use client";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function CaseStudiesPage() {
+  const t = useTranslations("caseStudies");
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -12,24 +15,25 @@ export default function CaseStudiesPage() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-r from-pink-600 via-purple-600 to-blue-700">
+    <section className="relative w-full overflow-hidden ">
       <form
         onSubmit={handleSubmit}
-        className="relative flex flex-col min-h-[450px] px-4 py-10 md:px-12 lg:px-[89px] md:flex-row md:justify-between md:py-12"
+        className="relative flex flex-col min-h-[450px] px-4 py-10 md:px-12 lg:px-[89px] md:flex-row md:justify-between md:py-12 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-700 mb-20"
       >
         {/* LEFT */}
         <div className="flex flex-col w-full max-w-[520px] text-white justify-center">
-          <h1 className="mb-8 md:mb-12 text-[24px] md:text-[31px] font-bold leading-tight">
-            We Provide You With Developers
-            And Dedicated Teams
+          <h1 className="mb-8 md:mb-12 text-3xl font-bold leading-tight">
+            {t("title")}
           </h1>
 
-          <p className="mb-4 text-[18px] md:text-[24px] font-semibold">Find cases</p>
+          <p className="mb-4 text-lg font-semibold">
+            {t("subtitle")}
+          </p>
 
           <input
             name="technology"
             type="text"
-            placeholder="Enter technology"
+            placeholder={t("inputPlaceholder")}
             className="
               w-full
               max-w-[440px]
@@ -38,10 +42,10 @@ export default function CaseStudiesPage() {
               text-white
               placeholder-white
               outline-none
-              border-b-[5px]
+              border-b-[3px]
               border-white
-              text-[16px]
-              md:text-[18px]
+              text-[14px]
+              md:text-[16px]
               font-semibold
               leading-[2.2]
               cursor-pointer
@@ -71,8 +75,8 @@ export default function CaseStudiesPage() {
               h-[50px]
               relative z-10
               bg-white
-              text-[16px]
-              md:text-[18px]
+              text-[14px]
+              md:text-[16px]
               font-semibold
               text-blue-700
               transition
@@ -81,10 +85,11 @@ export default function CaseStudiesPage() {
               hover:text-white
             "
           >
-            Find for cases
+            {t("submitButton")}
           </button>
         </div>
       </form>
     </section>
   );
 }
+

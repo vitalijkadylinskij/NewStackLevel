@@ -118,18 +118,18 @@ html {
 .hero-cta-btn {
   background-color: var(--accent);
   color: #fff;
-  transition: background-color 0.35s ease, color 0.35s ease;
+  transition: background-color 0.5s ease, color 0.35s ease;
 }
 .hero-cta-btn span {
   display: inline-block;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 .hero-cta-btn:hover {
   background-color: #fff;
   color: var(--accent);
 }
 .hero-cta-btn:hover span {
-  transform: translateY(-6px);
+  transform: translateY(-24px);
 }
 
 @keyframes hover-simple-revert {
@@ -139,19 +139,8 @@ html {
 .hover-simple-revert:hover { animation: hover-simple-revert 0.5s ease forwards; }
 
 /* Footer blue block: stuck to right edge, responsive width */
-.footer-blue-block {
-  margin-right: calc(50% - 50vw);
-  width: calc(100% + (50vw - 55%));
-}
-@media (max-width: 1500px) {
-  .footer-blue-block { width: calc(100% + (50vw - 60%)); }
-}
-@media (max-width: 1300px) {
-  .footer-blue-block { width: calc(100% + (50vw - 65%)); }
-}
+
 @media (max-width: 800px) {
-  .footer-blue-block { width: calc(50vw + 47%); }
+ 
 }
-@media (max-width: 625px) {
-  .footer-blue-block { width: calc(50vw + 75%); }
-}
+

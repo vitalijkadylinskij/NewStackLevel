@@ -1,7 +1,7 @@
 import { StepArrow } from "./ArrowBetweenSteps";
 
 type Props = {
-  step: string;
+  step: any;
   text: string;
   showArrow?: boolean;
 };
@@ -22,11 +22,11 @@ export function StepCard({
 
       {/* Content */}
       <div>
-        <div className="mb-3 md:mb-4 text-[28px] md:text-[36px] font-bold text-blue-700">
+        <div className="mb-3 md:mb-4 text-2xl font-bold text-blue-700">
           {step}
         </div>
 
-        <p className="text-[18px] md:text-[24px] leading-[1.2]">
+        <p className="text-lg">
           {text}
         </p>
       </div>

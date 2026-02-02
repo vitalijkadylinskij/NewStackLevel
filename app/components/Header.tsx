@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 
-const linkClass = "font-bold text-xl text-black no-underline transition hover:text-[var(--accent)] hover:shadow-[0_4px_0_0_var(--accent)]";
+const linkClass = "font-bold text-lg text-black no-underline transition hover:text-[var(--accent)] hover:shadow-[0_4px_0_0_var(--accent)]";
 const linkClassModal = "font-semibold text-black no-underline hover:text-[var(--accent)]";
 
 export default function Header() {
@@ -43,15 +43,15 @@ export default function Header() {
 
           <nav className="hidden flex-1 lg:flex lg:items-center lg:justify-between">
             <div className="flex flex-[2] items-center gap-[5vw] xl:gap-0 xl:gap-[30px]">
-              <div className="group relative inline-block w-[195px]">
+              <div className="group relative inline-block w-[230px]">
                 <Link href="/hire-web-developers" className={`relative block w-full ${linkClass}`}>
                   {t("hireDevelopers")}
                 </Link>
-                <div className="absolute left-0 top-full z-50 -mt-0.5 hidden min-w-[200px] flex-col gap-0 rounded bg-white pr-2.5 pb-2.5 pt-3 shadow group-hover:flex">
-                  <Link href="/hire-react-developers" className={`block w-full py-1.5 pr-2 ml-1 text-left text-lg font-medium capitalize ${linkClass}`}>
+                <div className="absolute left-0 top-full z-50 -mt-0.5 hidden min-w-[230px] flex-col gap-0 rounded bg-white pr-2.5 pb-2.5 pt-3 shadow group-hover:flex">
+                  <Link href="/hire-react-developers" className={`block w-full pl-2 pr-1.5 pr-2 ml-1 text-left text-lg font-medium capitalize ${linkClass}`}>
                     {t("reactDevelopment")}
                   </Link>
-                  <Link href="/hire-php-developers" className={`block w-full py-1.5 pr-2 ml-1 text-left text-lg font-medium capitalize ${linkClass}`}>
+                  <Link href="/hire-php-developers" className={`block w-full pl-2 pr-1.5 pr-2 ml-1 text-left text-lg font-medium capitalize ${linkClass}`}>
                     {t("phpDevelopment")}
                   </Link>
                 </div>
@@ -77,9 +77,9 @@ export default function Header() {
                 <Link href={pathname} locale="en" className={localeLinkClass("en")}>
                   EN
                 </Link>
-               {/* <Link href={pathname} locale="ru" className={`ml-1 ${localeLinkClass("ru")}`}>
+               <Link href={pathname} locale="ru" className={`ml-1 ${localeLinkClass("ru")}`}>
                   RU
-                </Link>*/}
+                </Link>
               </span>
             </div>
           </nav>

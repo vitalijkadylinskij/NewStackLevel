@@ -1,5 +1,6 @@
 import HireDevelopersHero from "../../components/HireDevelopersHero";
 import DevelopersFilter from "../../components/DevelopersFilter";
+import { useLocale, useTranslations } from "next-intl";
 
 export const metadata = {
   title: "Hire Web Developers | STACKLEVEL",
@@ -7,13 +8,16 @@ export const metadata = {
 };
 
 export default function HireWebDevelopersPage() {
+  const locale = useLocale();
+  const t = useTranslations("pageWebDevelopers");
+
   return (
     <section className="w-full mb-10">
       <HireDevelopersHero />
       <div className="w-full bg-white py-12">
         <div className="mx-auto max-w-[1476px]">
           <h2 className="text-2xl font-bold uppercase tracking-wide text-black">
-            Find developers
+            {t("title")}
           </h2>
         </div>
       </div>

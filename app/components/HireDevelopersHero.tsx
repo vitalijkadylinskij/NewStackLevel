@@ -35,7 +35,7 @@ export default function HireDevelopersHero({
       />
 
       <div className="width-wrapper relative z-10 flex min-h-[200px] flex-col items-start justify-between gap-6 px-4 py-10 sm:flex-row sm:items-center sm:px-6 md:py-12 lg:px-8">
-        <h1 className="font-semibold leading-tight text-white [font-size:clamp(22px,4vw,31px)]">
+        <h1 className="font-semibold leading-tight text-white text-2xl">
           <span className="block">{t("line1")}</span>
           <span className="block">{t("line2")}</span>
         </h1>
@@ -45,12 +45,12 @@ export default function HireDevelopersHero({
               w-full
               max-w-[300px]
               sm:w-[300px]
-              h-[75px]
+              h-[65px]
               cursor-pointer
               px-6 py-4
               font-medium uppercase
               transition-all duration-300
-              [font-size:clamp(16px,2vw,24px)]
+              text-lg
               border-[4px]
 
     ${
