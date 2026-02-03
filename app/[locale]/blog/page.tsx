@@ -14,7 +14,7 @@ export default function BlogPage() {
             {t("title")}
           </h1>
 
-          <div className="pointer-events-none absolute right-0 top-[10px] w-[200px] md:w-[400px] lg:w-[670px] h-auto opacity-60 md:opacity-100 hidden sm:block">
+          <div className="pointer-events-none absolute right-10 top-[10px] w-[200px] md:w-[400px] lg:w-[670px] h-auto opacity-60 md:opacity-100 hidden lg:block">
             <Image
               src="/images/blog_dots.svg"
               alt=""

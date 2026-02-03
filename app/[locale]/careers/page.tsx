@@ -21,11 +21,14 @@ export default function CareersPage() {
             -translate-y-1/2
             w-[85px]
             h-[220px]
+            z-0
+            hidden
+            min-[1025px]:block
           "
         />
 
         {/* CONTENT */}
-        <div className="mx-auto w-full max-w-[1100px] text-center px-4">
+        <div className="mx-auto w-full max-w-[1100px] text-center px-4 z-10">
           <h2 className="mb-8 md:mb-[60px] text-4xl font-bold text-black">
             {t("title")}
           </h2>

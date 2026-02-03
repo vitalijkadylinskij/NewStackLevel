@@ -15,18 +15,18 @@ export default function CaseStudiesPage() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden ">
+    <section className="relative w-full overflow-hidden">
       <form
         onSubmit={handleSubmit}
-        className="relative flex flex-col min-h-[450px] px-4 py-10 md:px-12 lg:px-[89px] md:flex-row md:justify-between md:py-12 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-700 mb-20"
+        className="relative mb-20 flex flex-col gap-10 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-700 px-4 py-10 md:px-10 md:py-12 lg:px-[80px] lg:py-16 lg:flex-row lg:items-center lg:justify-between"
       >
         {/* LEFT */}
-        <div className="flex flex-col w-full max-w-[520px] text-white justify-center">
-          <h1 className="mb-8 md:mb-12 text-3xl font-bold leading-tight">
+        <div className="flex w-full max-w-[520px] flex-col justify-center text-white">
+          <h1 className="mb-6 text-[clamp(24px,4vw,36px)] font-bold leading-tight">
             {t("title")}
           </h1>
 
-          <p className="mb-4 text-lg font-semibold">
+          <p className="mb-4 text-base font-semibold md:text-lg">
             {t("subtitle")}
           </p>
 
@@ -34,56 +34,28 @@ export default function CaseStudiesPage() {
             name="technology"
             type="text"
             placeholder={t("inputPlaceholder")}
-            className="
-              w-full
-              max-w-[440px]
-              bg-transparent
-              pb-2
-              text-white
-              placeholder-white
-              outline-none
-              border-b-[3px]
-              border-white
-              text-[14px]
-              md:text-[16px]
-              font-semibold
-              leading-[2.2]
-              cursor-pointer
-            "
+            className="w-full max-w-[440px] border-b-[3px] border-white bg-transparent pb-2 text-sm font-semibold leading-[2] text-white placeholder-white outline-none md:text-base"
           />
         </div>
 
         {/* RIGHT */}
-        <div className="relative flex flex-col items-center justify-end mt-8 md:mt-0">
-          <div className="pointer-events-none absolute z-0 w-[400px] md:w-[670px] h-[120px] md:h-[215px] top-[20px] right-[-120px] md:right-[-200px] opacity-40 md:opacity-100 hidden sm:block">
+        <div className="relative flex w-full max-w-[440px] flex-col items-start lg:items-end">
+          
+          {/* Dots */}
+          <div className="w-[670px] h-[215px] pointer-events-none absolute right-[-190px] top-[-90px] z-0 hidden lg:block">
+
             <Image
               src="/images/OurCasesDots.svg"
               alt=""
               width={670}
               height={215}
-              className="w-full h-full object-cover object-left"
+              className="h-full w-full object-cover object-left"
             />
           </div>
 
           <button
             type="submit"
-            className="
-              cursor-pointer
-              mb-12
-              md:mb-[50px]
-              w-[440px]
-              h-[50px]
-              relative z-10
-              bg-white
-              text-[14px]
-              md:text-[16px]
-              font-semibold
-              text-blue-700
-              transition
-              duration-400
-              hover:bg-blue-700
-              hover:text-white
-            "
+            className="relative z-10 mt-6 w-full cursor-pointer border-[3px] border-white bg-white px-6 py-3 text-sm font-semibold text-blue-700 transition-all duration-300 hover:bg-blue-700 hover:text-white md:px-8 md:py-4 md:text-base lg:mt-0"
           >
             {t("submitButton")}
           </button>
@@ -92,4 +64,3 @@ export default function CaseStudiesPage() {
     </section>
   );
 }
-

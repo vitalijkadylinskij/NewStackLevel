@@ -40,8 +40,8 @@ export default function HireDevelopersHero({
           <span className="block">{t("line2")}</span>
         </h1>
         <button
-            onClick={() => setIsOpen(true)}
-            className={`
+          onClick={() => setIsOpen(true)}
+          className={`
               w-full
               max-w-[300px]
               sm:w-[300px]
@@ -51,31 +51,33 @@ export default function HireDevelopersHero({
               font-medium uppercase
               transition-all duration-300
               text-lg
+              sm:text-base
               border-[4px]
 
-    ${
-      buttonVariant === "outlined"
-        ? `
-          bg-blue-700
-          text-white
-          border-blue-700
-          hover:bg-white
-          hover:text-blue-700
-          hover:border-blue-700
-        `
-        : `
-          bg-white
-          text-blue-700
-          border-white
-          hover:bg-blue-700
-          hover:text-white
-          hover:border-white
-        `
-    }
+              ${buttonVariant === "outlined"
+              ? `
+                    bg-blue-700
+                    text-white
+                    border-blue-700
+              
+                    hover:bg-white
+                    hover:text-blue-700
+                    hover:border-blue-700
+                  `
+              : `
+                    bg-white
+                    text-blue-700
+                    border-white
+                
+                    hover:bg-blue-700
+                    hover:text-white
+                    hover:border-white
+                  `
+            }
   `}
->
-  {buttonText}
-</button>
+        >
+          {buttonText}
+        </button>
 
 
         {isOpen && <HireUsModal onClose={() => setIsOpen(false)} />}

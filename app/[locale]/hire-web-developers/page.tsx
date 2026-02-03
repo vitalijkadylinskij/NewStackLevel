@@ -14,9 +14,22 @@ export default function HireWebDevelopersPage() {
   return (
     <section className="w-full mb-10">
       <HireDevelopersHero />
-      <div className="w-full bg-white py-12">
-        <div className="mx-auto max-w-[1476px]">
-          <h2 className="text-2xl font-bold uppercase tracking-wide text-black">
+      <div className="w-full bg-white py-8 sm:py-10 md:py-12 lg:py-14">
+        <div className="mx-auto w-full max-w-[1476px] px-4 sm:px-6 md:px-8 lg:px-10">
+          <h2
+            className="
+        font-bold
+        uppercase
+        tracking-wide
+        text-black
+        
+        text-lg
+        sm:text-xl
+        md:text-2xl
+        lg:text-3xl
+        xl:text-[32px]
+      "
+          >
             {t("title")}
           </h2>
         </div>
