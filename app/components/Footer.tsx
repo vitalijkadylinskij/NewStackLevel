@@ -25,7 +25,7 @@ export default function Footer() {
 
       <div className="relative flex flex-col z-10 w-full pb-1 flex">
         {/* Top: WE ARE + stats + CTA (white + dots) */}
-        <div className="mx-auto max-w-[min(1476px,92%)] grid grid-cols-1 gap-8 md:grid-cols-[auto_1fr] md:gap-0">
+        <div className="mx-auto max-w-[min(1476px,92%)] grid grid-cols-2 gap-0 md:grid-cols-[auto_1fr] md:gap-0">
           <div className="flex w-full max-w-[120px] min-[1280px]:max-h-[300px] justify-center md:col-start-1 md:row-span-1 md:mr-[5vw] md:justify-center bg-white">
             <Image
               src="/images/_we-are.svg"
@@ -41,7 +41,7 @@ export default function Footer() {
                 {stats.map((s) => (
                   <div
                     key={s.labelKey}
-                    className="flex flex-col max-w-[300px] font-semibold uppercase text-2xl bg-white ml-5 pl-5 py-1"
+                    className="flex flex-col max-w-[300px] font-semibold uppercase text-2xl bg-white max-[400px]:ml-[0] max-[400px]:pl-[10px] ml-5 pl-5 py-1"
                   >
                     {t.rich(`${s.labelKey}`, {
                       value: () => (

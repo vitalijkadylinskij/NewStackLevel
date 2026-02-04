@@ -49,7 +49,6 @@ html {
     linear-gradient(315deg, var(--dot-color) 4px, transparent 4px);
   background-position: 8px 11px, 48.5px 51.5px;
 }
-
 /* Hire Developers hero: light dots overlay on gradient, stronger on right */
 .hire-developers-hero-dots {
   background-size: 35px 35px;

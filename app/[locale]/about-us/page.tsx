@@ -12,7 +12,7 @@ export default function AboutUsPage() {
       <div className="mx-auto flex flex-col md:flex-row items-stretch">
 
         {/* LEFT */}
-        <div className="flex w-full md:w-1/2 items-center justify-center px-4 py-8 md:py-12">
+        <div className="flex w-full md:w-1/2 max-[1200px]:hidden items-center justify-center px-4 py-8 md:py-12">
           <div className="relative w-full max-w-[280px] sm:max-w-[360px] md:max-w-[470px] aspect-[470/170]">
             <Image
               src="/logo.svg"
@@ -25,10 +25,10 @@ export default function AboutUsPage() {
         </div>
 
         {/* RIGHT */}
-        <div className="relative w-full md:w-1/2 bg-blue-700 text-white px-4 sm:px-6 md:px-16 py-10 sm:py-12 md:py-20 md:mr-5">
+        <div className="relative w-full min-[1200]:w-1/2 bg-blue-700 text-white px-4 sm:px-6 md:px-16 py-10 sm:py-12 md:py-20 md:mr-5">
 
           {/* TEXT */}
-          <div className="relative z-10 w-full max-w-[510px] text-[16px] sm:text-[18px] md:text-[22px] lg:text-[24px] font-semibold">
+          <div className="relative z-10 w-full max-w-[370px] text-[16px] sm:text-[18px] md:text-[22px] lg:text-[24px] font-semibold">
             <p className="my-4 md:my-6">
               {t("intro.first")}
             </p>
@@ -39,7 +39,7 @@ export default function AboutUsPage() {
           </div>
 
           {/* SVG */}
-          <div className="pointer-events-none absolute top-[-30px] right-[-5px] w-[80px] sm:w-[120px] md:w-[170px] opacity-50 md:opacity-100 max-[1025px]:hidden">
+          <div className="pointer-events-none absolute top-[-30px] right-[-5px] w-[80px] sm:w-[120px] md:w-[170px] opacity-50 md:opacity-100 ">
             <Image
               src="/images/vector3.svg"
               alt=""
@@ -56,7 +56,6 @@ export default function AboutUsPage() {
       <div className="relative mx-auto max-w-[1476px] my-12 md:my-20 lg:my-[100px] px-4 md:px-0">
 
         <div className="flex flex-col md:flex-row w-full">
-
           {/* IMAGE */}
           <div className="relative w-full md:w-auto md:min-w-[260px] lg:min-w-[301px] aspect-[301/305] md:h-[305px] shrink-0">
             <Image

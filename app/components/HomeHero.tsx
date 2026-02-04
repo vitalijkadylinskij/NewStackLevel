@@ -47,6 +47,7 @@ col-start-2
 
 max-[1025px]:col-auto
 max-[1025px]:min-h-[420px]
+max-[1025px]:ml-[10%]
 ">
         <div
           className="page__subtitle__bg absolute inset-0 z-0 bg-[#0a0a0a] bg-cover bg-center bg-no-repeat"
@@ -58,7 +59,7 @@ max-[1025px]:min-h-[420px]
           alt=""
           width={200}
           height={160}
-          className="pointer-events-none absolute bottom-[8%] right-[4%] h-auto w-[22vw] max-w-[140px] opacity-90 
+          className="pointer-events-none absolute bottom-[8%] right-[4%] h-full w-[22vw] max-w-[140px] opacity-90 
           sm:right-[2%] sm:max-w-[200px] md:right-0 md:w-[17vw] md:max-w-[310px]"
           aria-hidden
         />
@@ -72,7 +73,7 @@ max-[1025px]:min-h-[420px]
           </h2>
 
           {/* CTA */}
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-0 md:gap-4 lg:gap-5 xl:gap-6">
+          <div className="mt-6 flex max-[1025px]:flex-col gap-3 sm:flex-row md:mt-0 md:gap-4 lg:gap-5 xl:gap-6">
 
             <Link
               href="/hire-web-developers"

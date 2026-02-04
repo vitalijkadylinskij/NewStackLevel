@@ -27,38 +27,31 @@ export default function Header() {
     }`;
 
   return (
-    <header className="relative z-50 flex h-20 w-full items-center bg-white md:h-[150px]">
+    <header className="relative z-50 flex h-20 w-full items-center bg-white lg:h-[150px]">
+      <div className="width-wrapper relative flex z-10 flex w-full items-center justify-between">
 
-      <div className="dots-pattern absolute left-0 right-0 top-0 h-full md:left-[35px] md:right-[35px] md:hidden" />
-
-      <div className="width-wrapper relative z-10 flex w-full items-center">
-
-        {/* LOGO */}
         <Link
           href="/"
-          className="relative z-10 shrink-0 mr-[clamp(20px,3vw,130px)]"
+          className="relative z-10 shrink-0"
         >
           <Image
             src="/logo.svg"
             alt="STACKLEVEL GROUP"
             width={254}
             height={48}
-            // NEW — адаптив логотип
             className="hidden lg:block w-[clamp(140px,11vw,254px)]"
           />
 
           <Image
-            src="/logo.svg"
+            src="/_small_logo.png"
             alt="STACKLEVEL"
-            width={120}
-            height={24}
-            className="block h-8 w-24 object-contain lg:hidden"
+            width={24}
+            height={57}
+            className="block h-8 w-24 object-contain lg:hidden w-[24px] h-[57px]"
           />
         </Link>
-
-        {/* DESKTOP NAV */}
-        <nav className="hidden lg:flex flex-1 items-center">
-
+        <div className="dots-pattern flex w-[80%] h-[60px] lg:hidden" />
+        <nav className="hidden lg:flex flex-1 w-full items-center justify-evenly">
           {/* LINKS */}
           <div className="flex items-center gap-[clamp(12px,2vw,32px)]">
 
@@ -108,9 +101,8 @@ export default function Header() {
             </Link>
 
           </div>
-
           {/* LANGUAGE */}
-          <div className="ml-auto flex shrink-0 items-center gap-2 pl-4">
+          <div className=" flex shrink-0 items-center gap-2 pl-4">
             <Link href={pathname} locale="en" className={localeLinkClass("en")}>
               EN
             </Link>
@@ -126,7 +118,7 @@ export default function Header() {
         <button
           type="button"
           aria-label="Open menu"
-          className="ml-auto cursor-pointer lg:hidden"
+          className="cursor-pointer lg:hidden"
           onClick={() => setMobileOpen(true)}
         >
           <Image src="/images/burger.svg" alt="" width={25} height={18} />
@@ -136,54 +128,63 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       <div className={`fixed inset-0 z-[200] bg-white ${mobileOpen ? "block" : "hidden"}`}>
-        <div className="width-wrapper flex h-20 items-center justify-between">
+        <div className="width-wrapper">
+          <div className="width-wrapper flex h-20 items-center justify-between">
+            
+            <div className="w-full max-w-[90px] max-h-[40px]">
+              <Link href="/" onClick={closeMobile} className="w-full max-w-[90px] max-h-[40px]">
+                <Image src="/_small_logo.png" alt="STACKLEVEL" width={180} height={40} className="w-full max-w-[24px] max-h-[57px]" />
+              </Link>
+            </div>
 
-          <Link href="/" onClick={closeMobile}>
-            <Image src="/logo.svg" alt="STACKLEVEL" width={180} height={40} />
-          </Link>
+            <span className="flex gap-4">
+              <Link href={pathname} locale="en" className={localeLinkClass("en")} onClick={closeMobile}>
+                EN
+              </Link>
 
-          <span className="flex gap-4">
-            <Link href={pathname} locale="en" className={localeLinkClass("en")} onClick={closeMobile}>
-              EN
+              <Link href={pathname} locale="ru" className={localeLinkClass("ru")} onClick={closeMobile}>
+                RU
+              </Link>
+            </span>
+
+            <button onClick={closeMobile}>
+              <Image src="/images/modal-close.svg" alt="" width={40} height={40} />
+            </button>
+          </div>
+          <div className="w-full max-w-[180px] max-h-[40px] mt-4">
+            <Link href="/" onClick={closeMobile}>
+              <Image src="/logo.svg" alt="STACKLEVEL" width={180} height={40} />
+            </Link>
+          </div>
+          <div className=" mt-24 flex flex-col items-end gap-4 text-2xl">
+            <Link href="/hire-web-developers" className={linkClassModal} onClick={closeMobile}>
+              {t("hireDevelopers")}
             </Link>
 
-            <Link href={pathname} locale="ru" className={localeLinkClass("ru")} onClick={closeMobile}>
-              RU
+            <Link href="/hire-dedicated-team" className={linkClassModal} onClick={closeMobile}>
+              {t("hireTeam")}
             </Link>
-          </span>
 
-          <button onClick={closeMobile}>
-            <Image src="/images/modal-close.svg" alt="" width={40} height={40} />
-          </button>
+            <Link href="/case-studies" className={linkClassModal} onClick={closeMobile}>
+              {t("ourCases")}
+            </Link>
 
+            <Link href="/about-us" className={linkClassModal} onClick={closeMobile}>
+              {t("aboutUs")}
+            </Link>
+
+            <Link href="/blog" className={linkClassModal} onClick={closeMobile}>
+              {t("blog")}
+            </Link>
+
+            <Link href="/careers" className={linkClassModal} onClick={closeMobile}>
+              {t("career")}
+            </Link>
+          </div>
         </div>
-
-        <div className="width-wrapper mt-24 flex flex-col items-end gap-4 text-2xl">
-          <Link href="/hire-web-developers" className={linkClassModal} onClick={closeMobile}>
-            {t("hireDevelopers")}
-          </Link>
-
-          <Link href="/hire-dedicated-team" className={linkClassModal} onClick={closeMobile}>
-            {t("hireTeam")}
-          </Link>
-
-          <Link href="/case-studies" className={linkClassModal} onClick={closeMobile}>
-            {t("ourCases")}
-          </Link>
-
-          <Link href="/about-us" className={linkClassModal} onClick={closeMobile}>
-            {t("aboutUs")}
-          </Link>
-
-          <Link href="/blog" className={linkClassModal} onClick={closeMobile}>
-            {t("blog")}
-          </Link>
-
-          <Link href="/careers" className={linkClassModal} onClick={closeMobile}>
-            {t("career")}
-          </Link>
+        <div className="absolute top-[175px] left-[-40]">
+          <Image src="/_burger_bg.png" alt="background" width={100} height={300} />
         </div>
-
       </div>
     </header>
   );

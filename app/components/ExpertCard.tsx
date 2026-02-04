@@ -5,7 +5,7 @@ type Props = {
   
 export function ExpertCard({ title, text }: Props) {
     return (
-      <div className="relative flex min-h-[240px] md:min-h-[280px] w-full max-w-[280px] flex-col border border-gray-200 bg-white p-6 md:p-8 justify-between">
+      <div className="relative flex min-h-[190px] w-full  flex-col border border-gray-200 bg-white p-6 md:p-8 justify-between">
         <h3 className="mb-3 md:mb-4 text-[20px] font-bold uppercase text-blue-700">
           {title}
         </h3>
